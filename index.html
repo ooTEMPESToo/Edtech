@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduFun - Multi-Level Drag & Drop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="min-h-screen bg-white text-[#161612]"
+    style="font-family: 'Spline Sans', 'Noto Sans', sans-serif"
+  >
+    <div class="layout-container flex flex-col min-h-screen">
+      <header
+        class="flex items-center justify-between border-b border-[#f4f4f1] px-10 py-3"
+      >
+        <div class="flex items-center gap-4">
+          <div class="w-4 h-4">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 6H42L36 24L42 42H6L12 24L6 6Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-lg font-bold">EduFun</h2>
+        </div>
+        <div class="flex items-center gap-8">
+          <nav class="flex gap-9">
+            <a class="text-sm font-medium" href="#">Games</a>
+            <a class="text-sm font-medium" href="#">Stories</a>
+            <a class="text-sm font-medium" href="#">Activities</a>
+          </nav>
+          
+          
+        </div>
+      </header>
+
+      <main class="px-6 md:px-20 py-6 flex-grow">
+        <h2 class="text-[28px] font-bold text-center pb-4">
+          Welcome to EduFun!
+        </h2>
+
+        <div class="flex flex-col gap-3 items-center">
+          <div class="text-base font-medium" id="levelDisplay">Level: 1</div>
+          <div class="w-full max-w-md bg-[#e3e3dd] rounded overflow-hidden">
+            <div
+              id="progressBarFill"
+              class="h-2 bg-[#161612] w-0 transition-all"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4"
+          id="dropTargets"
+        ></div>
+        <div class="flex flex-wrap gap-3 p-4" id="draggableLetters"></div>
+
+        <p
+          id="result"
+          class="text-center mt-4 text-lg font-bold text-green-600"
+        ></p>
+
+        <div class="flex justify-center mt-6">
+          <button
+            id="nextBtn"
+            class="hidden bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full shadow-md transition"
+          >
+            Next Level
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <audio
+      id="successSound"
+      src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_e9fe9b1a4f.mp3?filename=correct-2-46134.mp3"
+    ></audio>
+    <audio
+      id="failSound"
+      src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_b7ac920126.mp3?filename=wrong-2-46137.mp3"
+    ></audio>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

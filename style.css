@@ -1,0 +1,70 @@
+/* body {
+  font-family: 'Comic Neue', cursive;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.drag-item {
+  transition: transform 0.2s ease-in-out;
+}
+.drag-item:hover {
+  transform: scale(1.1);
+}
+
+.drop-box {
+  transition: border 0.2s ease-in-out, background-color 0.2s;
+}
+.drop-box.border-dashed {
+  animation: pulseBorder 0.5s ease-in-out infinite;
+}
+
+@keyframes pulseBorder {
+  0% { border-color: #34d399; }
+  50% { border-color: #10b981; }
+  100% { border-color: #34d399; }
+}
+
+.progress-bar {
+  height: 16px;
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  width: 0%;
+  transition: width 0.3s;
+} */
+
+body {
+  font-family: 'Spline Sans', 'Noto Sans', sans-serif;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.drag-item {
+  transition: transform 0.2s ease-in-out;
+}
+.drag-item:hover {
+  transform: scale(1.05);
+}
+
+.drop-box {
+  transition: border 0.2s ease-in-out, background-color 0.2s;
+}
+.drop-box.border-dashed {
+  animation: pulseBorder 0.5s ease-in-out infinite;
+}
+
+@keyframes pulseBorder {
+  0% { border-color: #34d399; }
+  50% { border-color: #10b981; }
+  100% { border-color: #34d399; }
+}
+
